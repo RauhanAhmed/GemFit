@@ -9,7 +9,7 @@ pipeline = Pipeline()
 allImages = getImages(nImages = 100)
 
 # creating a Gradio interface using Blocks
-with gr.Blocks() as interface:
+with gr.Blocks(title = "GemFit") as interface:
     # Row for input images
     with gr.Row():
         inputImage = gr.Image(label = "Input Image", type = "pil", image_mode = "RGB", interactive = True)
@@ -49,4 +49,4 @@ with gr.Blocks() as interface:
     submit.click(fn = pipeline.clothingTryOn, inputs = [inputImage, selectedNecklace], outputs = [outputOne, outputTwo, outputThree])
 
 # Launch the Gradio interface with debug mode enabled
-interface.launch(debug = True, share = True)
+interface.launch(server_name = "0.0.0.0", server_port = 7860)

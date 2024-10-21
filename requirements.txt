@@ -1,7 +1,11 @@
-appwrite
-gradio
-cvzone
-mediapipe
+appwrite==7.0.0
+cvzone==1.6.1
+diffusers==0.30.3
+gradio==5.1.0
+mediapipe==0.10.15
+numpy==1.26.4
+opencv-python==4.10.0.84
+pillow==10.4.0
 torch
-diffusers
+transformers==4.44.2
 -e .
